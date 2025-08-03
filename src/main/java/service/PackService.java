@@ -26,7 +26,7 @@ public class PackService {
             executor.submit(() -> {
                 try {
                     HttpRequest request = HttpRequest.newBuilder()
-                            .uri(URI.create(auth.getBaseUrl() + pack.getPath()))
+                            .uri(URI.create(auth.getBaseUrl() + "/buy-pack/" + pack.getPath()))
                             .header("Content-Type", "application/x-www-form-urlencoded")
                             .header("X-CSRFToken", auth.getCsrfToken())
                             .header("Cookie", getCookieHeader())
