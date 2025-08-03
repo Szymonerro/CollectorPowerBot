@@ -27,7 +27,6 @@ public class AuthService {
     }
 
     public void login(String username, String password) throws IOException, InterruptedException {
-        // GET login page to get CSRF token cookie
         HttpRequest getLoginPage = HttpRequest.newBuilder()
                 .uri(URI.create(baseUrl + "/accounts/login/"))
                 .GET()
